@@ -1,0 +1,39 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.mainContainer{
+  display: flex; 
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.section{
+  float: left;
+  width: 45%;
+  height: 100%;
+  background-color:#F4F3EA;;
+  color: #333D51;
+  margin: 1%;
+  padding: 1%;
+}
+#gates{
+    background-color:#333D51;
+    color: #F4F3EA;;
+    text-decoration: none;
+    padding-right: 2px;
+    padding-left: 6px;
+    font-size: 24px;
+}
+#gates > a{
+  font-size:30px;
+  color: #F4F3EA;
+  border-color:#F4F3EA;
+  background-color: brown;
+  border-style: dashed;
+  border-width: 2px;
+  border-color:#F4F3EA;
+  padding: 5px;
+  margin: 2px;
+  text-decoration: none;
+}

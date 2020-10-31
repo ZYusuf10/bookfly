@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h2 
+  div(id="topJournal")
+    form(method='POST' action='searchTechnical')
+              input(type='text' name='searchSubject' placeholder='Enter Keyword')
+              button.btn.btn-primary(type='submit' id="submit") Search Records
+  p you searched for  #{searchSubject}
+  div(id="books")
+      each val in bookList 
+          if val.ispn.includes(searchSubject) || val.coursename.includes(searchSubject) || val.coursenumber.includes(searchSubject) || val.booktitle.includes(searchSubject)
+              div(class="book")
+                div= val.booktitle
+                div= val.ispn
+                div= val.coursename
+                div= val.coursenumber
+                div= val.price
+                div= val.imagename
+                img(src='/images/'+val.imagename)
+                a(href=val.url) read more

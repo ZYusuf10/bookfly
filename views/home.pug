@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  h2 
+   a(class="link-button" href="/logOut") logOut
+  div(id="searchFormBlock")
+    form(method='POST' action='searchBook')
+              input(type='text' name='searchSubject' placeholder='Enter Keyword(s)')
+              button.btn.btn-primary(type='submit' id="submit") Search For a book
+              a(class="link-button" href="/advanced") Advanced Search
+    a(class="link-button" href="/sell") sell a book
+            
+

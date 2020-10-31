@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  nav(id="goback")
+    a(href="/") GoBack
+  h2(id="signupH2")= title
+  form(method='POST' action='signUpPost' id="signupForm")
+    br
+    input#firstname.form-control(type='text' placeholder='Firstname' name='firstname' required='true')
+    br
+    input#lastname.form-control(type='text' placeholder='Lastname' name='lastname' required='true')
+    br
+    input#password.form-control(type='text' placeholder='New Password' name='password' required='true')
+    br
+    input#username.form-control(type='text' placeholder='New Username' name='username' required='true')
+    br
+    input#email.form-control(type='text' placeholder='Your email' name='email' required='true')
+    br
+    button.btn.btn-primary(type='submit' class="submit") Finish Signing Up

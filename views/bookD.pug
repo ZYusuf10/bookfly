@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  p book details
+  p=record.booktitle
+  p=record.coursename
+  p=record.price +"$"
+  p=record.username+" posted it"
+  img(src='/images/'+record.imagename)
+  a(href="") purchase
+  br
+  a(href="") contact #{record.username}

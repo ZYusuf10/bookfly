@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  nav(id="goback")
+    a(href="/homeGEt") GoBack
+  h2(id="signupH2")= title
+  form(method='POST'  action='sellPost' id="sellForm" enctype="multipart/form-data")
+    input#ispn.form-control(type='text' placeholder='ISPN' name='ispn' )
+    br
+    input#coursename.form-control(type='text' placeholder='Course Name' name='coursename' )
+    br
+    input#coursenumber.form-control(type='text' placeholder='Course Number' name='coursenumber' )
+    br
+    input#booktitle.form-control(type='text' placeholder='Book Title' name='booktitle' )
+    br
+    input#price.form-control(type="number" min="0.01" step="0.01" placeholder="Price $" name="price" )
+    br
+    input#image.form-control(type="file" name="image" placeholder="image" class="fileI" )
+    br
+    button.btn.btn-primary(type='submit' class="submit") Post
