@@ -44,7 +44,13 @@ exports.loginGet = function(req, res){
 
 //home
 exports.homeGet = function(req, res){
-    res.render('home', {title: ''});
+    Book.find({}, 'coursename coursenumber booktitle price imagename')
+    .exec(
+        function(err, bookList){
+            if(err) {return next(err);}
+            res.render('home', {title: 'bookFly', bookList: bookList, searchSubject: req.body.searchSubject});
+        }
+    );
 };
 
 // sell 

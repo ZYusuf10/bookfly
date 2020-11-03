@@ -1,12 +1,13 @@
 extends layout
 
 block content
-  nav(id="goback")
-    a(href="/") Go Back to front
-  h2(id="loginH2")= title
-  form(method='POST' action='/loginPost' id="loginForm")
-    input#username.form-control(type='text' placeholder='Username' name='username' required='true')
-    br
-    input#password.form-control(type='text' placeholder='password' name='password' required='true')
-    br
-    button.btn.btn-primary(type='submit' class="submit") Login
+  div(class="doors")
+    nav(id="goback")
+      a(href="/") Go Back to front
+    h2(id="loginH2")= title
+    form(method='POST' action='/loginPost' id="loginForm")
+      input#username.form-control(type='text' placeholder='Username' name='username' required='true')
+      br
+      input#password.form-control(type='text' placeholder='password' name='password' required='true')
+      br
+      button.btn.btn-primary(type='submit' class="submit") Login

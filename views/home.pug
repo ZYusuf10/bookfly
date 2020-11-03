@@ -1,14 +1,31 @@
 extends layout
 
 block content
-  h1= title
-  h2 
-   a(class="link-button" href="/logOut") logOut
-  div(id="searchFormBlock")
-    form(method='POST' action='searchBook')
-              input(type='text' name='searchSubject' placeholder='Enter Keyword(s)')
-              button.btn.btn-primary(type='submit' id="submit") Search For a book
-              a(class="link-button" href="/advanced") Advanced Search
-    a(class="link-button" href="/sell") sell a book
+  div(id="home")
+    div(id="top" class="mainContainer")
+      h1(class="topHome")= title
+      a(class="link-button" href="/logOut" class="topHome") logOut
+      div(id="searchFormBlock" class="topHome")
+        form(method='POST' action='searchBook' class="search")
+          input(type='text' name='searchSubject' placeholder='Enter Keyword(s)' )
+          button.btn.btn-primary(type='submit' id="submit") Search For a book
+      a(class="link-button" href="/sell" class="topHome") sell a book
+    div(id="homeData" class="mainContainer")
+      each val in bookList 
+        div(class="book")
+          img(src='/images/'+val.imagename)
+          div= val.booktitle
+          div= val.ispn
+          div= val.coursename
+          div= val.price +"$"
+          div= val.imagename
+          a(href=val.url) read more
+    div(class="footer")
+      a(href="") About Us
+      a(href="") Contact Us
+      a(href="") Terms and Conditions
+      a(href="") Feedback
+
+      
             
 
